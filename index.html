@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Song App</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body >
+    <div class="wrapper">
+        <section class="welcome-screen">
+            
+            <h1> Welcome to Songify </h1>
+            <h3> Enter name to access your account </h3>
+            
+            <div class="input-wrapper">
+                <input type="text" placeholder="your Name, then press Enter!" id="name-input" style="width:250px; height:25px" autofocus="autofocus">
+                <button style="background-color:#d7ddea; font-family: helvetica; color:#4c4c4c "> Go! </button>
+            </div>
+        </section>
+        
+        <div class="main hidden">
+            <header>
+                <div class="right floated user-name" style="font-family: helvetica; color:#F3F9A7; font-weight: bold; margin-right:15px"> </div><br></header>
+            <div> <h1 style="font-family: helvetica; color: white; font-weight: bold; text-align:center; margin-right:80px"> How's Your Mood Today?</h1></div>
+            
+            <div class="image-div"> <!--ismai hmne apne alg alg folder ki images lgai h-->
+                 <img src="img/happy.jpg" id="happy" class="img-gallery">
+                 <img src="img/energetic.jpg" id="energetic" class="img-gallery"><br>
+                 <img src="img/mellow.jpg" id="mellow" class="img-gallery">
+            <img src="img/acoustic.jpg" id="acoustic" class="img-gallery">
+            
+            </div>
+            
+        </div>
+        <!--happy based mood k liye hmne happy class bnayi h or uski playlist bnake rkhi h or ek button bnaya h go back wala jisse hm apne main page pe wapis ponch jayenge.-->
+        <div class="happy hidden">
+        <i class="fa fa-arrow-left" aria-hidden="true" style="margin:20px" id="back-happy">Go back</i>
+            <section class="content">
+                <audio src="happy1.mp3"></audio>
+            
+           <table id="happysongs">
+            <thead class="list-headers">
+            <tr><td> Title </td>
+            <td> Artist </td>
+            <td> Album </td>
+            <td> Duration </td>
+        </tr></thead>
+        <!-- <div class="song-list"> -->
+            
+               <tbody><tr class="song" id="happy1">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="happy2">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="happy3">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="happy4">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+        <!-- </div> -->
+    </tbody></table>
+                
+                <div class="current-song-wrapper">
+                    <img src="" class="current-song-image">
+                <div>
+                     <p class="current-song-name"></p>
+                     <p class="current-song-album"></p>
+              </div>
+                </div>      
+                </section>
+            <footer>
+                <!--Pause icoon is hidden initially-->
+                <div class="controls">
+                    <div class="player-buttons">
+                        
+                        <i class="fa fa-step-backward clickable" aria-hidden="true"></i>
+                        <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                        <i class="fa fa-step-forward clickable" aria-hidden="true"></i>
+                        
+                        
+
+                    </div>
+                    <div class="progress-wrapper">
+                        <span class="time-elapsed"> </span>
+                        <div class="player-progress">
+                            <div class="progress-filled"> </div>
+                        </div>
+                        <span class="song-duration"></span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    
+        <!--yhn pr hmne energetic  mood based playlist bnai h-->
+
+        <div class="energetic hidden">
+        <i class="fa fa-arrow-left" aria-hidden="true" style="margin:20px" id="back-energetic">Go back</i>
+            <section class="content">
+                <audio src="energetic1.mp3"></audio>
+            
+           <table id="energeticsongs">
+            <thead class="list-headers">
+            <tr><td> Title </td>
+            <td> Artist </td>
+            <td> Album </td>
+            <td> Duration </td>
+        </tr></thead>
+        <!-- <div class="song-list"> -->
+            
+               <tbody><tr class="song" id="energetic1">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="energetic2">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="energetic3">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="energetic4">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+        <!-- </div> -->
+    </tbody></table>
+                
+               
+            
+                
+                
+                 <div class="current-song-wrapper">
+                    <img src="" class="current-song-image">
+                <div>
+                     <p class="current-song-name"></p>
+                     <p class="current-song-album"></p>
+              </div>
+                </div>      
+                </section>
+            <footer><!--Pause icoon is hidden initially-->
+                
+               
+                
+                <div class="controls">
+                    <div class="player-buttons">
+                        
+                        <i class="fa fa-step-backward clickable" aria-hidden="true"></i>
+                        <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                        <i class="fa fa-step-forward clickable" aria-hidden="true"></i>
+                        
+                        </div>
+                    <div class="progress-wrapper">
+                        <span class="time-elapsed"> </span>
+                        <div class="player-progress">
+                            <div class="progress-filled"> </div>
+                        </div>
+                        <span class="song-duration"></span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    
+    <!--mellow based music -->
+        <div class="mellow hidden">
+        <i class="fa fa-arrow-left" aria-hidden="true" style="margin:20px" id="back-mellow">Go back</i>
+            <section class="content">
+                <audio src="mellow1.mp3"></audio>
+            
+           <table id="mellowsongs">
+            <thead class="list-headers">
+            <tr><td> Title </td>
+            <td> Artist </td>
+            <td> Album </td>
+            <td> Duration </td>
+        </tr></thead>
+        <!-- <div class="song-list"> -->
+            <tbody><tr class="song" id="mellow1">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="mellow2">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="mellow3">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="mellow4">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+        <!-- </div> -->
+    </tbody></table>
+                
+                <div class="current-song-wrapper">
+                    <img src="" class="current-song-image">
+                <div>
+                     <p class="current-song-name"></p>
+                     <p class="current-song-album"></p>
+              </div>
+                </div>      
+                </section>
+            <footer>
+                <!--Pause icoon is hidden initially-->
+                <div class="controls">
+                    <div class="player-buttons">
+                    
+                       <i class="fa fa-step-backward clickable" aria-hidden="true"></i>
+                        <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                        <i class="fa fa-step-forward clickable" aria-hidden="true"></i>
+                        
+                        
+
+                    </div>
+                    <div class="progress-wrapper">
+                        <span class="time-elapsed"> </span>
+                        <div class="player-progress">
+                            <div class="progress-filled"> </div>
+                        </div>
+                        <span class="song-duration"></span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!--acoustic music k liye-->
+    <div class="acoustic hidden">
+        <i class="fa fa-arrow-left" aria-hidden="true" style="margin:20px" id="back-acoustic">Go back</i>
+            <section class="content">
+                <audio src="acoustic1.mp3"></audio>
+            
+           <table id="acousticsongs">
+            <thead class="list-headers">
+            <tr><td> Title </td>
+            <td> Artist </td>
+            <td> Album </td>
+            <td> Duration </td>
+        </tr></thead>
+        <!-- <div class="song-list"> -->
+            <tbody><tr class="song" id="acoustic1">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="acoustic2">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="acoustic3">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+            <tr class="song" id="acoustic4">
+                <td class="song-name"></td>
+                <td class="song-artist"></td>
+                <td class="song-album"></td>
+                <td class="song-length"></td>
+            </tr>
+        <!-- </div> -->
+    </tbody></table>
+                
+                <div class="current-song-wrapper">
+                    <img src="" class="current-song-image">
+                <div>
+                     <p class="current-song-name"></p>
+                     <p class="current-song-album"></p>
+              </div>
+                </div>      
+                </section>
+            <footer>
+                <!--Pause icoon is hidden initially-->
+                <div class="controls">
+                    <div class="player-buttons">
+                        
+                        <i class="fa fa-step-backward clickable" aria-hidden="true"></i>
+                        <i class="fa fa-play clickable play-icon" aria-hidden="true"></i>
+                        <i class="fa fa-step-forward clickable" aria-hidden="true"></i>
+                        
+                        
+
+                    </div>
+                    <div class="progress-wrapper">
+                        <span class="time-elapsed"> </span>
+                        <div class="player-progress">
+                            <div class="progress-filled"> </div>
+                        </div>
+                        <span class="song-duration"></span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    
+    </div>
+        
+        
+    <script src="jquery-3.2.1.min.js">
+    </script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="main.js">
+    </script>
+</body>
+
+</html>
